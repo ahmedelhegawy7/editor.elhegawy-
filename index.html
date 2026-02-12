@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>الحجاوي — مونتير فيديو ومصمّم صور</title>
+
+  <meta name="description" content="الحجاوي — مونتاج فيديو احترافي وتصميم صور فخم بإضاءة نيون ولمسة حمراء." />
+
+  <meta name="theme-color" content="#ff0a3f" />
+
+  <meta property="og:title" content="الحجاوي — مونتير فيديو ومصمّم صور" />
+
+  <meta property="og:description" content="ملف شخصي فخم بواجهة عربية (RTL) مع شورييل، معرض، قبل/بعد، باقات، وآراء." />
+
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <link
+
+    rel="icon"
+
+    href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="black"/><path d="M10 32h44" stroke="%23ff0a3f" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="32" r="12" fill="%23ff0a3f"/></svg>' />
+
+  <style>
+
+    :root{
+
+      --bg-0:#0a0b10;
+
+      --bg-1:#0e0f15;
+
+      --text:#e9e9ef;
+
+      --muted:#b4b5c0;
+
+      --primary:#ff0a3f;
+
+      --primary-2:#d1002f;
+
+      --primary-3:#ff4a6b;
+
+      --card:#11121a;
+
+      --glass: rgba(255,255,255,0.06);
+
+      --stroke: rgba(255,255,255,0.08);
+
+      --radius:18px;
+
+      --shadow-0:0 10px 30px rgba(0,0,0,.35);
+
+      --shine: 0 0 25px rgba(255,10,63,.35), 0 0 60px rgba(255,10,63,.18);
+
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+
+      margin:0;
+
+      background:
+
+        radial-gradient(1200px 800px at 80% -20%, rgba(255,10,63,.12), transparent 60%),
+
+        radial-gradient(1000px 600px at -10% 20%, rgba(255,10,63,.10), transparent 60%),
+
+        linear-gradient(180deg, var(--bg-0), var(--bg-1));
+
+      color:var(--text);
+
+      font-family:"Tajawal", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+      line-height:1.8;
+
+      overflow-x:hidden;
+
+      font-weight:400;
+
+      -webkit-font-smoothing: antialiased;
+
+      -moz-osx-font-smoothing: grayscale;
+
+      letter-spacing:0.3px;
+
+    }
+
+    .container{width:min(1400px,95%); margin-inline:auto}
+
+    a{color:inherit; text-decoration:none}
+
+    img, video{max-width:100%; display:block}
+
+    @media(max-width:768px){
+
+      .container{width:min(100%,98%)}
+
+    }
+
+    /* Scroll progress */
+
+    .scroll-progress{
+
+      position:fixed; inset:0 0 auto 0; height:3px; background:linear-gradient(90deg,var(--primary),var(--primary-3));
+
+      transform-origin:left; transform:scaleX(0); z-index:9999; box-shadow:var(--shine);
+
+    }
+
+    /* Header */
+
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:999; background:transparent; transition:all .35s ease}
+
+    .site-header.scrolled{
+
+      background:linear-gradient( to bottom, rgba(10,11,16,.75), rgba(10,11,16,.35) );
+
+      backdrop-filter:saturate(140%) blur(10px);
+
+      border-bottom:1px solid var(--stroke);
+
+    }
+
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0}
+
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.5px; font-size:1.1rem}
+
+    .brand .logo{
+
+      width:38px; height:38px; border-radius:10px;
+
+      background: radial-gradient(45% 45% at 50% 50%, rgba(255,10,63,.35), rgba(255,10,63,.05));
+
+      border:2px solid rgba(255,10,63,.6);
+
+      box-shadow: inset 0 0 18px rgba(255,10,63,.22), 0 0 15px rgba(255,10,63,.5), 0 0 30px rgba(255,10,63,.3);
+
+      display:grid; place-items:center; position:relative; overflow:hidden;
+
+      transition: all 0.3s ease;
+
+    }
+
+    .brand .logo:hover{
+
+      border-color:rgba(255,10,63,.8);
+
+      box-shadow: inset 0 0 18px rgba(255,10,63,.35), 0 0 25px rgba(255,10,63,.7), 0 0 40px rgba(255,10,63,.5);
+
+      transform: scale(1.05);
+
+    }
+
+    .brand .logo::after{
+
+      content:""; position:absolute; inset:-40px; transform:rotate(35deg);
+
+      background:linear-gradient( to right, transparent, rgba(255,255,255,.2), transparent );
+
+      animation:glide 4s linear infinite;
+
+    }
+
+    @keyframes glide{0%{transform:translateX(-60%) rotate(35deg)}100%{transform:translateX(60%) rotate(35deg)}}
+
+    .brand span{filter:drop-shadow(0 0 8px rgba(255,10,63,.45))}
+
+    .nav-links{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+
+    .nav-links a{
+
+      padding:8px 14px; color:var(--muted); position:relative; font-weight:600; transition:.2s; font-size:clamp(13px, 1.5vw, 15px)
+
+    }
+
+    .nav-links a:hover{color:var(--text)}
+
+    .nav-links a::after{
+
+      content:""; position:absolute; inset:auto 10px -6px 10px; height:2px; background:linear-gradient(90deg, transparent, var(--primary), transparent);
+
+      opacity:0; transform:scaleX(.5); transition:.25s; box-shadow:0 0 12px rgba(255,10,63,.6);
+
+    }
+
+    .nav-links a:hover::after{opacity:1; transform:scaleX(1)}
+
+    .burger{display:none; width:44px; height:44px; border-radius:12px; border:1px solid var(--stroke); background:var(--glass); color:var(--text)}
+
+    @media (max-width:1000px){
+
+      .burger{display:inline-grid; place-items:center}
+
+      .nav-links{
+
+        position:fixed; inset:70px 8px auto 8px; background:rgba(12,13,18,.95); backdrop-filter:blur(16px);
+
+        border:1px solid var(--stroke); border-radius:18px; padding:16px; display:none; flex-direction:column; z-index:998;
+
+        gap:10px; max-height:80vh; overflow-y:auto;
+
+      }
+
+      .nav-links.open{display:flex}
+
+      .nav-links a{padding:10px 12px; border-radius:10px; width:100%; text-align:center; transition:.2s}
+
+      .nav-links a:hover{background:rgba(255,10,63,.15)}
+
+    }
+
+    @media(max-width:480px){
+
+      .nav-links{inset:65px 6px auto 6px; padding:12px}
+
+      .nav-links a{padding:8px 10px; font-size:13px}
+
+    }
+
+
+
+    /* Sections */
+
+    section{padding:130px 0}
+
+    @media(max-width:768px){
+
+      section{padding:80px 0}
+
+    }
+
+    @media(max-width:480px){
+
+      section{padding:60px 0}
+
+    }
+
+    .section-title{
+
+      font-size:clamp(28px, 3vw, 42px); margin:0 0 12px; letter-spacing:1px;
+
+      text-shadow:0 0 18px rgba(255,10,63,.24);
+
+      font-weight:900;
+
+      line-height:1.2;
+
+    }
+
+    .section-sub{color:var(--muted); margin-bottom:32px; font-size:clamp(15px, 1.8vw, 18px); letter-spacing:0.4px; line-height:1.8}
+
+
+
+    /* Hero */
+
+    .hero{min-height:100svh; display:grid; place-items:center; position:relative; padding-top:80px; overflow:hidden}
+
+    @media(max-width:768px){
+
+      .hero{min-height:90svh; padding-top:60px}
+
+    }
+
+    @media(max-width:480px){
+
+      .hero{min-height:85svh; padding-top:50px}
+
+    }
+
+    .hero::before,.hero::after{
+
+      content:""; position:absolute; inset:-20%; pointer-events:none; z-index:-2;
+
+      background:
+
+        radial-gradient(700px 500px at 20% 10%, rgba(255,10,63,.22), transparent 60%),
+
+        radial-gradient(500px 400px at 80% 20%, rgba(255,10,63,.15), transparent 60%),
+
+        radial-gradient(900px 700px at 50% 120%, rgba(255,10,63,.10), transparent 60%);
+
+      filter: blur(10px);
+
+      animation: floatBg 18s ease-in-out infinite alternate;
+
+    }
+
+    .hero::after{
+
+      background:
+
+        radial-gradient(400px 300px at 70% 80%, rgba(255,74,107,.20), transparent 60%),
+
+        radial-gradient(500px 400px at 10% 80%, rgba(255,10,63,.18), transparent 60%);
+
+      animation-duration: 22s;
+
+    }
+
+    @keyframes floatBg{0%{transform:translateY(-10px) scale(1)}100%{transform:translateY(10px) scale(1.05)}}
+
+    .hero-inner{display:grid; gap:16px; text-align:center}
+
+    .neon{
+
+      font-size: clamp(44px, 8.5vw, 92px); line-height:1.05; margin:0; color:#fff;
+
+      text-shadow: 0 0 18px rgba(255,10,63,.65), 0 0 32px rgba(255,10,63,.35), 0 0 64px rgba(255,10,63,.25);
+
+      letter-spacing:2px;
+
+      font-weight:900;
+
+      word-spacing:8px;
+
+    }
+
+    @media(max-width:768px){
+
+      .neon{font-size:clamp(36px, 7vw, 60px)}
+
+    }
+
+    @media(max-width:480px){
+
+      .neon{font-size:clamp(28px, 6vw, 40px)}
+
+    }
+
+    .typing{
+
+      display:inline-block; font-weight:800; color:#fff;
+
+      background:linear-gradient(90deg, #fff, #ff8aa2, #fff);
+
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+
+      animation: hue 8s linear infinite;
+
+      position:relative;
+
+    }
+
+    .typing::after{
+
+      content:""; display:inline-block; width:10px; height:1.1em; vertical-align:bottom; margin-right:6px;
+
+      background:linear-gradient(180deg, #fff, #ff8aa2); box-shadow:0 0 10px rgba(255,10,63,.6);
+
+      animation: blink 1s steps(1) infinite;
+
+    }
+
+    @keyframes hue{0%{filter:hue-rotate(0)}100%{filter:hue-rotate(360deg)}}
+
+    @keyframes blink{50%{opacity:0}}
+
+    .hero .role{color:var(--muted); font-size:clamp(16px, 2.2vw, 22px)}
+
+    .hero .cta{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:16px}
+
+    @media(max-width:480px){
+
+      .hero .cta{gap:10px; margin-top:12px}
+
+    }
+
+    .btn{
+
+      --pad: 14px 22px; padding:var(--pad); border-radius:14px; border:1px solid var(--stroke); font-weight:800; letter-spacing:.3px;
+
+      background:rgba(255,255,255,.04); color:var(--text); transition:.25s; position:relative; overflow:hidden; cursor:pointer;
+
+    }
+
+    @media(max-width:480px){
+
+      .btn{--pad: 12px 18px; font-size:14px}
+
+    }
+
+    .btn::before{
+
+      content:""; position:absolute; inset:-60% -80% auto auto; transform:rotate(25deg);
+
+      width:120%; height:60%; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent); transition:.35s; opacity:0;
+
+    }
+
+    .btn:hover::before{opacity:1; transform:translateX(-10%) rotate(25deg)}
+
+    .btn-primary{
+
+      background:linear-gradient(180deg, rgba(255,10,63,.16), rgba(255,10,63,.06));
+
+      border-color:rgba(255,10,63,.35);
+
+      box-shadow:inset 0 0 30px rgba(255,10,63,.15), 0 10px 30px rgba(255,10,63,.18);
+
+    }
+
+    .btn-ghost{background:transparent; border-color:rgba(255,10,63,.4); color:#fff}
+
+    .hero .socials{display:flex; gap:14px; justify-content:center; margin-top:12px}
+
+    .icon-btn{
+
+      width:42px; height:42px; display:grid; place-items:center; border-radius:12px; background:rgba(255,255,255,.04);
+
+      border:1px solid var(--stroke); color:var(--text); transition:.25s;
+
+    }
+
+    .icon-btn:hover{transform:translateY(-2px); box-shadow:var(--shine)}
+
+    .stats{display:flex; gap:18px; justify-content:center; margin-top:20px; flex-wrap:wrap}
+
+    .stat{background:rgba(255,255,255,.04); border:1px solid var(--stroke); border-radius:14px; padding:12px 18px}
+
+    .stat .num{font-weight:900; font-size:clamp(18px, 2vw, 24px); color:#fff; text-shadow:0 0 12px rgba(255,10,63,.35)}
+
+    .stat .lbl{font-size:clamp(12px, 1.5vw, 14px); color:var(--muted); margin-top:4px}
+
+
+
+    /* Reel */
+
+    .reel-card{
+
+      position:relative; border-radius:20px; overflow:hidden; border:1px solid var(--stroke);
+
+      background:
+
+        radial-gradient(60% 60% at 50% 50%, rgba(255,10,63,.22), transparent 60%),
+
+        linear-gradient(180deg, #14151d, #0f1016);
+
+      aspect-ratio:16/9; display:grid; place-items:center;
+
+      box-shadow: var(--shadow-0);
+
+      min-height:300px;
+
+    }
+
+    @media(max-width:768px){
+
+      .reel-card{min-height:250px}
+
+    }
+
+    @media(max-width:480px){
+
+      .reel-card{min-height:200px}
+
+    }
+
+    .play-btn{
+
+      width:82px; height:82px; border-radius:50%; display:grid; place-items:center; cursor:pointer;
+
+      background: radial-gradient(60% 60% at 50% 50%, rgba(255,10,63,.35), rgba(255,10,63,.15));
+
+      border:1px solid rgba(255,255,255,.15); box-shadow:var(--shine); transition: transform .2s ease;
+
+      animation: pulse 2.2s ease-in-out infinite;
+
+    }
+
+    .play-btn:hover{transform:scale(1.05)}
+
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,10,63,.35)}50%{box-shadow:0 0 0 16px rgba(255,10,63,.0)}}
+
+    .reel-embed, .reel-thumb{position:absolute; inset:0}
+
+    .reel-thumb{display:grid; place-items:center}
+
+    .tag-list{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+
+    .chip{
+
+      padding:10px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.10);
+
+      background:rgba(255,10,63,.08); color:#fff; font-weight:600; font-size:clamp(13px, 1.5vw, 14px)
+
+    }
+
+
+
+    /* About */
+
+    .about{display:grid; grid-template-columns: 1.1fr 1.3fr; gap:40px; align-items:center}
+
+    @media(max-width:950px){ .about{grid-template-columns:1fr; text-align:center; gap:30px} }
+
+    .avatar{
+
+      width:min(380px, 85vw); aspect-ratio:1; margin-inline:auto; border-radius:24px;
+
+      background:
+
+        radial-gradient(60% 60% at 50% 30%, rgba(255,10,63,.25), transparent 60%),
+
+        linear-gradient(180deg, rgba(255,10,63,.18), rgba(255,10,63,.06));
+
+      border:1px solid rgba(255,255,255,.08); position:relative; overflow:hidden;
+
+      box-shadow:inset 0 0 60px rgba(255,10,63,.18), var(--shine);
+
+      display:grid; place-items:center;
+
+    }
+
+    @media(max-width:480px){
+
+      .avatar{width:min(300px, 90vw)}
+
+    }
+
+    .avatar::after{content:""; position:absolute; inset:-30%; transform:rotate(30deg);
+
+      background:radial-gradient(closest-side, rgba(255,255,255,.12), transparent 60%);
+
+      mix-blend-mode:screen; filter:blur(12px); animation: floatBg 8s ease-in-out infinite alternate;}
+
+    .avatar svg{width:62%; filter: drop-shadow(0 10px 30px rgba(255,10,63,.35))}
+
+    .tools{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+
+    .tool{padding:10px 14px; border-radius:12px; background:rgba(255,255,255,.05); border:1px solid var(--stroke); font-weight:700; font-size:clamp(13px, 1.5vw, 14px)}
+
+    .marquee{overflow:hidden; border-radius:14px; border:1px solid var(--stroke); background:rgba(255,255,255,.03); margin-top:16px}
+
+    .marquee .track{display:flex; gap:30px; padding:12px 14px; animation: slide 18s linear infinite}
+
+    @keyframes slide{to{transform:translateX(30%)}}
+
+
+
+    /* Grids */
+
+    .grid{display:grid; gap:20px}
+
+    .skills-grid{grid-template-columns: repeat(3, 1fr)}
+
+    @media(max-width:950px){ .skills-grid{grid-template-columns:1fr 1fr} }
+
+    @media(max-width:620px){ .skills-grid{grid-template-columns:1fr} }
+
+    .services-grid{grid-template-columns: repeat(3, 1fr)}
+
+    @media(max-width:1100px){ .services-grid{grid-template-columns:1fr 1fr} }
+
+    @media(max-width:620px){ .services-grid{grid-template-columns:1fr} }
+
+
+
+    /* Card base */
+
+    .card{
+
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+
+      border:1px solid var(--stroke); border-radius:var(--radius); padding:24px; position:relative; overflow:hidden;
+
+      box-shadow: var(--shadow-0);
+
+    }
+
+    @media(max-width:480px){
+
+      .card{padding:16px}
+
+    }
+
+    .card.tilt{transform-style:preserve-3d; transition: transform .2s ease}
+
+    .card .head{display:flex; align-items:center; gap:14px; margin-bottom:12px}
+
+    .ring{
+
+      width:50px; height:50px; border-radius:12px; display:grid; place-items:center; flex-shrink:0;
+
+      background: radial-gradient(40% 40% at 50% 50%, rgba(255,10,63,.25), transparent 60%);
+
+      border:1px solid rgba(255,255,255,.10);
+
+      box-shadow: inset 0 0 26px rgba(255,10,63,.20);
+
+    }
+
+    .card .head h3{margin:0; font-size:clamp(16px, 1.8vw, 18px)}
+
+
+
+    /* Gallery */
+
+    .filters{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px}
+
+    .f-btn{
+
+      padding:10px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.10);
+
+      background:rgba(255,255,255,.04); color:#fff; font-weight:700; font-size:clamp(12px, 1.5vw, 14px); cursor:pointer;
+
+    }
+
+    .f-btn.active{background:linear-gradient(180deg, rgba(255,10,63,.16), rgba(255,10,63,.06)); border-color:rgba(255,10,63,.4); box-shadow:var(--shine)}
+
+    .gallery-grid{display:grid; gap:18px; grid-template-columns: repeat(3, 1fr)}
+
+    @media(max-width:1100px){ .gallery-grid{grid-template-columns:1fr 1fr} }
+
+    @media(max-width:620px){ .gallery-grid{grid-template-columns:1fr} }
+
+    .gallery-item{
+
+      position:relative; border-radius:18px; overflow:hidden; border:1px solid var(--stroke); cursor:pointer;
+
+      background:linear-gradient(180deg, #14151d, #0f1016);
+
+      min-height:240px;
+
+    }
+
+    @media(max-width:768px){
+
+      .gallery-item{min-height:200px}
+
+    }
+
+    @media(max-width:480px){
+
+      .gallery-item{min-height:180px}
+
+    }
+
+    .gallery-item .overlay{
+
+      position:absolute; inset:auto 0 0 0; padding:14px; background:linear-gradient(180deg, transparent, rgba(0,0,0,.6));
+
+      border-top:1px solid rgba(255,255,255,.06)
+
+    }
+
+    .gallery-item .label{font-weight:800; font-size:clamp(14px, 1.5vw, 16px)}
+
+    .gallery-item .meta{font-size:clamp(12px, 1.4vw, 13px); color:var(--muted)}
+
+    .gallery-item::after{
+
+      content:""; position:absolute; inset:0; background: radial-gradient(500px 300px at var(--px, 50%) var(--py, 50%), rgba(255,10,63,.18), transparent 40%);
+
+      opacity:.8; pointer-events:none; transition:opacity .2s;
+
+    }
+
+    .gallery-item:hover::after{opacity:1}
+
+    .thumb{position:absolute; inset:0; background-size:cover; background-position:center; filter:contrast(1.02) saturate(1.02)}
+
+
+
+    /* Before/After */
+
+    .ba{position:relative; border-radius:18px; overflow:hidden; border:1px solid var(--stroke); background:#0f1016}
+
+    .ba-wrap{position:relative; aspect-ratio:16/9}
+
+    .ba .img{position:absolute; inset:0; object-fit:cover; width:100%; height:100%; display:block}
+
+    .ba .before{clip-path: inset(0 calc(100% - var(--cut,50%)) 0 0)}
+
+    .ba input[type=range]{
+
+      position:absolute; inset:auto 0 0 0; width:100%; appearance:none; background:transparent; height:36px; cursor:ew-resize;
+
+    }
+
+    .ba input[type=range]::-webkit-slider-thumb{
+
+      appearance:none; width:24px; height:24px; border-radius:50%; background:var(--primary); border:none; box-shadow:0 0 20px rgba(255,10,63,.6)
+
+    }
+
+    .ba .handle{
+
+      position:absolute; top:50%; transform:translateY(-50%); right:calc(100% - var(--cut,50%));
+
+      width:2px; height:100%; background:rgba(255,255,255,.4); box-shadow:0 0 12px rgba(255,10,63,.5)
+
+    }
+
+
+
+    /* Pricing */
+
+    .pricing-grid{display:grid; gap:20px; grid-template-columns: repeat(3, 1fr)}
+
+    @media(max-width:1100px){ .pricing-grid{grid-template-columns:1fr 1fr} }
+
+    @media(max-width:620px){ .pricing-grid{grid-template-columns:1fr} }
+
+    .price-card{position:relative; border-radius:18px; overflow:hidden}
+
+    .price-card.popular{border-color:rgba(255,10,63,.5); box-shadow:0 0 0 1px rgba(255,10,63,.25), var(--shine)}
+
+    .price-tag{font-size:clamp(26px, 3vw, 32px); font-weight:900; margin:8px 0; color:#fff; text-shadow:0 0 14px rgba(255,10,63,.35)}
+
+    .features{color:var(--muted); display:grid; gap:10px; margin:12px 0 16px; font-size:clamp(14px, 1.5vw, 15px)}
+
+    .badge{display:inline-block; padding:6px 12px; border-radius:999px; font-size:12px; background:rgba(255,10,63,.18); border:1px solid rgba(255,255,255,.10)}
+
+
+
+    /* Testimonials */
+
+    .testi-grid{display:grid; gap:20px; grid-template-columns: repeat(3, 1fr)}
+
+    @media(max-width:1100px){ .testi-grid{grid-template-columns:1fr 1fr} }
+
+    @media(max-width:620px){ .testi-grid{grid-template-columns:1fr} }
+
+    .testi .person{display:flex; align-items:center; gap:12px; margin-bottom:10px}
+
+    .avatar-sm{
+
+      width:42px; height:42px; border-radius:50%; display:grid; place-items:center; font-weight:800; color:#fff;
+
+      background:linear-gradient(180deg, rgba(255,10,63,.3), rgba(255,10,63,.15)); border:1px solid rgba(255,255,255,.1); box-shadow:var(--shine)
+
+    }
+
+    .stars{display:flex; gap:4px; color:#ff8aa2}
+
+
+
+    /* Inputs */
+
+    .contact-wrap{display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:start}
+
+    @media(max-width:900px){ .contact-wrap{grid-template-columns:1fr} }
+
+    @media(max-width:480px){ .contact-wrap{gap:16px} }
+
+    form .field{display:flex; gap:10px; flex-direction:column; margin-bottom:16px}
+
+    input, textarea{
+
+      background:rgba(255,255,255,.04); border:1px solid var(--stroke); color:var(--text);
+
+      border-radius:14px; padding:14px 16px; outline:none; transition:.2s; font-family:inherit; font-size:clamp(14px, 1.5vw, 16px)
+
+    }
+
+    textarea{min-height:140px; resize:vertical}
+
+    input:focus, textarea:focus{border-color:rgba(255,10,63,.4); box-shadow:0 0 0 3px rgba(255,10,63,.15)}
+
+    .note{color:var(--muted); font-size:clamp(13px, 1.5vw, 14px)}
+
+
+
+    /* Reveal on scroll + variants */
+
+    [data-animate]{opacity:0; transform:translateY(26px); transition: all .7s cubic-bezier(.2,.75,.2,1)}
+
+    [data-animate].show{opacity:1; transform:none}
+
+    [data-ani="left"]{transform:translateX(26px)}
+
+    [data-ani="right"]{transform:translateX(-26px)}
+
+    [data-ani="scale"]{transform:scale(.96)}
+
+
+
+    /* Cursor FX (hidden on touch) */
+
+    @media (pointer:fine){
+
+      .cursor-dot, .cursor-ring{position:fixed; pointer-events:none; z-index:10000}
+
+      .cursor-dot{width:7px; height:7px; background:var(--primary); border-radius:50%; box-shadow:0 0 16px rgba(255,10,63,.7)}
+
+      .cursor-ring{width:34px; height:34px; border-radius:50%; border:2px solid rgba(255,10,63,.6); box-shadow:var(--shine); transition: transform .15s ease, opacity .25s ease}
+
+      .hide-cursor{opacity:0}
+
+    }
+
+    
+
+    /* Wave Animation */
+
+    @keyframes wave { 0%, 100%{transform:translateY(0px)} 50%{transform:translateY(-10px)} }
+
+    .wave-animate{animation: wave 2s ease-in-out infinite}
+
+    
+
+    /* Particle Effect */
+
+    .particle{position:fixed; pointer-events:none; animation: particle-float 2s ease-out forwards}
+
+    @keyframes particle-float{0%{opacity:1; transform:translate(0,0) scale(1)}100%{opacity:0; transform:translate(var(--tx),var(--ty)) scale(0)}}
+
+    
+
+    /* Ripple effect */
+
+    @keyframes ripple { to { transform: scale(4); opacity: 0; } }
+
+
+
+    /* Back to top */
+
+    .to-top{
+
+      position:fixed; inset:auto 16px 16px auto; width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+
+      background:rgba(255,255,255,.05); border:1px solid var(--stroke); color:#fff; z-index:999; transform:translateY(20px); opacity:0; transition:.25s;
+
+    }
+
+    .to-top.show{opacity:1; transform:none}
+
+    footer{padding:40px 0; color:var(--muted); text-align:center; font-size:clamp(13px, 1.5vw, 14px)}
+
+    .neon-avatar {
+
+  position: relative;
+
+  width: clamp(160px, 25vw, 240px);
+
+  aspect-ratio:1;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  box-shadow: 
+
+    0 0 10px #ff0a3f,
+
+    0 0 20px #ff0a3f,
+
+    0 0 40px rgba(255, 10, 63, 0.6);
+
+  transition: all 0.3s ease;
+
+}
+
+
+
+.neon-avatar img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(1.1) saturate(1.2);
+
+}
+
+
+
+.neon-avatar:hover {
+
+  box-shadow: 
+
+    0 0 15px #ff335f,
+
+    0 0 30px #ff0a3f,
+
+    0 0 60px rgba(255, 10, 63, 0.8);
+
+}
+
+  </style>
+
+</head>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const playBtn = document.getElementById('playReel');
+
+    const reelThumb = document.getElementById('reelThumb');
+
+    const reelEmbed = document.getElementById('reelEmbed');
+
+
+
+    if (playBtn && reelThumb && reelEmbed) {
+
+      playBtn.addEventListener('click', () => {
+
+        // إخفاء الصورة والزر
+
+        reelThumb.style.display = 'none';
+
+        // إظهار الإطار
+
+        reelEmbed.hidden = false;
+
+
+
+        // استخراج معرف الفيديو من الرابط (iOVSgt2mMiE)
+
+        const videoId = 'iOVSgt2mMiE';
+
+        const iframe = reelEmbed.querySelector('iframe');
+
+        
+
+        // تأكد من أن مصدر الفيديو مُعد بشكل صحيح
+
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&showinfo=0&modestbranding=1`;
+
+
+
+        // (اختياري) تفعيل تشغيل تلقائي عند التحميل
+
+        // iframe.src += '&autoplay=1'; // مفعل بالفعل أعلاه
+
+      });
+
+    }
+
+  });
+
+</script>
+
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+
+  <header class="site-header" id="header">
+
+    <div class="container nav">
+
+      <a href="#home" class="brand">
+
+        <span class="logo">
+
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+
+            <path d="M6 12h12" stroke="#ff0a3f" stroke-width="2" stroke-linecap="round"/>
+
+            <circle cx="12" cy="12" r="5" fill="#ff0a3f"/>
+
+          </svg>
+
+        </span>
+
+        <span>الحجاوي</span>
+
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+
+        <a href="#home">الرئيسية</a>
+
+        <a href="#showreel">مثال لأعمال سابقة</a>
+
+        <a href="#about">نبذة</a>
+
+        <a href="#services">الخدمات</a>
+
+        <a href="#gallery">المعرض</a>
+
+        <a href="#before-after">قبل/بعد</a>
+
+        <a href="#packages">الباقات</a>
+
+        <a href="#testimonials">الآراء</a>
+
+        <a href="#contact">تواصل</a>
+
+      </nav>
+
+      <button class="burger" id="burger" aria-label="القائمة">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+
+        </svg>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- 1) HERO --><section id="home" class="hero">
+
+  <div class="container hero-inner" data-animate>
+
+    <h1 class="neon">الحجاوي</h1>
+
+    <p class="role">
+
+      <span id="typing" class="typing" data-words="مونتير فيديو|مصمّم صور|موشن جرافيك"></span>
+
+    </p>
+
+    <div class="cta">
+
+      <a href="#showreel" class="btn btn-primary">شاهد الشورييل</a>
+
+      <a href="#contact" class="btn btn-ghost">اطلب مشروع</a>
+
+    </div>
+
+
+
+    <!-- هنا ايقونات السوشيال -->
+
+    <div class="socials">
+
+      <!-- YouTube -->
+
+      <a class="icon-btn" 
+
+         href="https://www.youtube.com/@ELHEGAWY7" 
+
+         target="_blank" 
+
+         rel="noopener" 
+
+         aria-label="YouTube" 
+
+         title="YouTube">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+
+          <path fill="currentColor" d="M23 7.1a4.6 4.6 0 0 0-3.26-3.26C17.7 3.25 12 3.25 12 3.25s-5.7 0-7.74.59A4.6 4.6 0 0 0 .99 7.1 48.1 48.1 0 0 0 .4 12a48.1 48.1 0 0 0 .59 4.9 4.6 4.6 0 0 0 3.26 3.26c2.04.59 7.74.59 7.74.59s5.7 0 7.74-.59A4.6 4.6 0 0 0 23 16.9a48.1 48.1 0 0 0 .59-4.9 48.1 48.1 0 0 0-.59-4.9ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z"/>
+
+        </svg>
+
+      </a>
+
+
+
+      <!-- TikTok -->
+
+      <a class="icon-btn" 
+
+         href="https://www.tiktok.com/@elhegawyeditor" 
+
+         target="_blank" 
+
+         rel="noopener" 
+
+         aria-label="TikTok" 
+
+         title="TikTok">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+
+          <path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 1 1-4.77-2.3A2.4 2.4 0 0 1 9.1 9.66V5.92a8.05 8.05 0 0 0-7.18 4.32v4.51a8.08 8.08 0 0 0 8.03 8.05 8.05 8.05 0 0 0 8.08-8.05v-4.25a10.29 10.29 0 0 0 5.83 1.77V9.45a6.26 6.26 0 0 1-5.32-2.75z"/>
+
+        </svg>
+
+      </a>
+
+
+
+      <!-- Instagram -->
+
+      <a class="icon-btn" 
+
+         href="https://www.instagram.com/elhegawy7/" 
+
+         target="_blank" 
+
+         rel="noopener" 
+
+         aria-label="Instagram" 
+
+         title="Instagram">
+
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+
+          <path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.5 1 .5.5.8.9 1 1.5.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-1 1.5-.5.5-.9.8-1.5 1-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.5-1-.5-.5-.8-.9-1-1.5-.2-.4-.4-1.1-.5-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 1-1.5.5-.5.9-.8 1.5-1 .4-.2 1.1-.4 2.3-.5C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.6.2-2 .4-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.2.4-.3 1-.4 2-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.6.4 2 .2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.2 1 .3 2 .4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.6-.2 2-.4.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.2-.4.3-1 .4-2 .1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.6-.4-2-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.2-1-.3-2-.4-1.2-.1-1.6-.1-4.7-.1Zm0 3.4a6.6 6.6 0 1 1 0 13.2 6.6 6.6 0 0 1 0-13.2Zm0 10.8a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Zm6.8-10.9a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0Z"/>
+
+        </svg>
+
+      </a>
+
+    </div>
+
+    <!-- نهاية ايقونات السوشيال -->
+
+
+
+    <div class="stats" aria-label="إحصائيات">
+
+      <div class="stat"><div class="num" data-count="300">0</div><div class="lbl">مشروع</div></div>
+
+      <div class="stat"><div class="num" data-count="167">0</div><div class="lbl">عميل</div></div>
+
+      <div class="stat"><div class="num" data-count="3">0</div><div class="lbl">سنوات خبرة</div></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- 2) SHOWREEL -->
+
+<section id="showreel">
+
+  <div class="container">
+
+    <h2 class="section-title" data-animate>الشورييل</h2>
+
+    <p class="section-sub" data-animate>
+
+      دقيقة واحدة تلخص الأسلوب: مونتاج سريع، تلوين دقيق، ولمسة نيون راقية.
+
+    </p>
+
+
+
+    <div class="reel-card card" data-animate data-ani="scale">
+
+      <div class="reel-thumb" id="reelThumb">
+
+        <button class="play-btn" id="playReel" aria-label="تشغيل الشورييل">
+
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff">
+
+            <path d="M8 5v14l11-7z"/>
+
+          </svg>
+
+        </button>
+
+      </div>
+
+
+
+      <!-- الفيديو هنا -->
+
+      <div class="reel-embed" id="reelEmbed" hidden>
+
+        <iframe width="100%" height="315"
+
+          src="https://youtu.be/RRraS3dXmX0?si=tF3S6KKMhKa4Byuz"
+
+          title="YouTube video player" frameborder="0"
+
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+          allowfullscreen>
+
+        </iframe>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tag-list" data-animate>
+
+      <span class="chip">إعلانات</span>
+
+      <span class="chip">ريلز</span>
+
+      <span class="chip">يوتيوب</span>
+
+      <span class="chip">حفلات</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- 3) ABOUT -->
+
+<!-- سكشن ABOUT بعد التعديل -->
+
+<section id="about">
+
+  <div class="container">
+
+    <h2 class="section-title" data-animate>نبذة</h2>
+
+    <p class="section-sub" data-animate>
+
+      أنا الحجاوي — مونتير فيديو ومصمّم صور. أصنع قصصًا مرئية بمونتاج ديناميكي وتلوين يبرز التفاصيل، مع لمسة نيون حمراء فاخرة.
+
+    </p>
+
+    <div class="about">
+
+      <!-- صورة اللوجو بدل الـ SVG -->
+
+      <div class="avatar" data-animate data-ani="right">
+
+        <img src="logo.jpg" alt="شعار الحجاوي" class="glow-logo">
+
+      </div>
+
+
+
+      <div data-animate data-ani="left">
+
+        <h3 style="margin-top:0">ما الذي أقدّمه؟</h3>
+
+        <p class="section-sub" style="margin:0 0 12px">
+
+          - مونتاج احترافي لكل أنواع المحتوى (إعلانات، ريلز، يوتيوب).<br/>
+
+          - تلوين لوني (Color Grading) وتصحيح ألوان (Color Correction).<br/>
+
+          - موشن جرافيك بسيط لتعزيز الرسالة.<br/>
+
+          - ريتاتش وتحرير صور مع الحفاظ على الطابع الطبيعي.
+
+        </p>
+
+        <div class="tools" aria-label="أدواتي">
+
+          <span class="tool">Premiere Pro</span>
+
+          <span class="tool">After Effects</span>
+
+          <span class="tool">DaVinci Resolve</span>
+
+          <span class="tool">Photoshop</span>
+
+          <span class="tool">Lightroom</span>
+
+        </div>
+
+        <div class="marquee">
+
+          <div class="track">
+
+            <span class="chip">Color Grading</span>
+
+            <span class="chip">Montage</span>
+
+            <span class="chip">Retouch</span>
+
+            <span class="chip">Motion</span>
+
+            <span class="chip">Sound Polish</span>
+
+            <span class="chip">Brand Visuals</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- هنا CSS في نفس الصفحة -->
+
+<style>
+
+  .glow-logo {
+
+    width: clamp(140px, 25vw, 200px);          
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    filter: drop-shadow(0 0 12px rgba(255, 10, 63, 0.7)) 
+
+            drop-shadow(0 0 24px rgba(255, 0, 60, 0.5));
+
+    transition: filter 0.3s ease-in-out;
+
+  }
+
+
+
+  /* لما يمر الماوس يزيد التوهج */
+
+  .glow-logo:hover {
+
+    filter: drop-shadow(0 0 20px rgba(255, 0, 60, 1))
+
+            drop-shadow(0 0 40px rgba(255, 0, 60, 0.8));
+
+  }
+
+</style>
+
+  <!-- 4) SERVICES -->
+
+  <section id="services">
+
+    <div class="container">
+
+      <h2 class="section-title" data-animate>الخدمات</h2>
+
+      <p class="section-sub" data-animate>حلول مرئية متكاملة — من الفكرة إلى التسليم.</p>
+
+
+
+      <div class="grid services-grid">
+
+        <div class="card tilt" data-animate>
+
+          <div class="head">
+
+            <div class="ring"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h12v12H3zM18 10v8" stroke="#ff8aa2" stroke-width="2"/></svg></div>
+
+            <h3 style="margin:0">مونتاج فيديو</h3>
+
+          </div>
+
+          <p class="section-sub" style="margin:6px 0 12px">قَصّ وإيقاع، مزج مشاهد، عناوين، وسلاسة انتقالات.</p>
+
+          <span class="badge">إعلانات • ريلز • يوتيوب</span>
+
+        </div>
+
+
+
+        <div class="card tilt" data-animate>
+
+          <div class="head">
+
+            <div class="ring"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="4" stroke="#ff8aa2" stroke-width="2"/><path d="M12 12l8 8" stroke="#ff8aa2" stroke-width="2"/></svg></div>
+
+            <h3 style="margin:0">مــوشن جرافيك</h3>
+
+          </div>
+
+          <p class="section-sub" style="margin:6px 0 12px"> الانيميشن سلس و احترافي مثل الشركات الضخمه عمل انيمشن 3D & 2D</p>
+
+          <span class="badge">cenima4D • After effects</span>
+
+        </div>
+
+
+
+        <div class="card tilt" data-animate>
+
+          <div class="head">
+
+            <div class="ring"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h16" stroke="#ff8aa2" stroke-width="2"/></svg></div>
+
+            <h3 style="margin:0">تصميم صور</h3>
+
+          </div>
+
+          <p class="section-sub" style="margin:6px 0 12px">تصميم ثامبنيلز .بوستات لمنصات التواصل.</p>
+
+          <span class="badge">Photoshop • Lightroom</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+ 
+
+
+
+  <!-- 6) BEFORE/AFTER -->
+
+  <section id="before-after">
+
+    <div class="container">
+
+      <h2 class="section-title" data-animate>قبل/بعد</h2>
+
+      <p class="section-sub" data-animate>اسحب الشريط لترى تأثير التلوين والريتش.</p>
+
+
+
+      <div class="ba card" data-animate data-ani="scale">
+
+        <div class="ba-wrap" id="ba1" style="--cut:50%">
+
+          <!-- استبدل src بالصور الحقيقية -->
+
+          <img class="img after" src="after.jpg" alt="بعد" />
+
+          <img class="img before" src="before.jpg" alt="قبل" />
+
+          <span class="handle"></span>
+
+          <input type="range" min="0" max="100" value="50" aria-label="تحريك المقارنة" />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 7) PACKAGES -->
+
+  <section id="packages">
+
+    <div class="container">
+
+      <h2 class="section-title" data-animate>الباقات</h2>
+
+      <p class="section-sub" data-animate>اختر الأنسب — وأسعار مرنة حسب المدة والمتطلبات.</p>
+
+
+
+      <div class="pricing-grid">
+
+        <div class="card price-card tilt" data-animate>
+
+          <span class="badge">أساسي</span>
+
+          <h3 style="margin:8px 0 0">مقطع ريلز إحترافي</h3>
+
+          <div class="price-tag">250 ج</div>
+
+          <div class="features">
+
+            <span>مونتاج حتى 30 ثانية</span>
+
+            <span>مونتاج احترافي على After effects</span>
+
+            <span>تأثيرات و جرافيك احترافيه</span>
+
+            <span>تسليم 1080p</span>
+
+          </div>
+
+          <a href="#contact" class="btn btn-primary">ابدأ الآن</a>
+
+        </div>
+
+
+
+        <div class="card price-card popular tilt" data-animate>
+
+          <span class="badge">الأكثر طلبًا</span>
+
+          <h3 style="margin:8px 0 0">منتاج فديوهات بل عرض</h3>
+
+          <div class="price-tag">400 ج</div>
+
+          <div class="features">
+
+            <span>منتاج فديوهات طويله</span>
+
+            <span>Color Grading احترافي</span>
+
+            <span> كاميرا3d + Transition + نصوص</span>
+
+            <span>مناسب لك خصيصا</span>
+
+          </div>
+
+          <a href="#contact" class="btn btn-primary">احجز الباقة</a>
+
+        </div>
+
+
+
+        <div class="card price-card tilt" data-animate>
+
+          <span class="badge"> تصميم الصور</span>
+
+          <h3 style="margin:8px 0 0">الصور المصغره</h3>
+
+          <div class="price-tag">130 ج</div>
+
+          <div class="features">
+
+            <span>صور مناسبه لكل منتج</span>
+
+            <span> جرافيك احترافي </span>
+
+            <span>ريتش للصور</span>
+
+            <span>تسليم اي ستايل مطلوب </span>
+
+          </div>
+
+          <a href="#contact" class="btn btn-primary">اطلب عرض مخصص</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 8) TESTIMONIALS -->
+
+  <section id="testimonials">
+
+    <div class="container">
+
+      <h2 class="section-title" data-animate>آراء العملاء</h2>
+
+      <p class="section-sub" data-animate>ثقة عملاء من مجالات مختلفة.</p>
+
+
+
+      <div class="testi-grid">
+
+        <div class="card testi" data-animate>
+
+          <div class="person">
+
+            <div class="avatar-sm">هـ</div>
+
+            <div>
+
+              <strong>هالة منصور</strong>
+
+              <div class="stars">
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <p class="section-sub">الشغل راقي ورفع تفاعلنا على السوشيال بشكل ملحوظ.</p>
+
+        </div>
+
+
+
+        <div class="card testi" data-animate>
+
+          <div class="person">
+
+            <div class="avatar-sm">س</div>
+
+            <div>
+
+              <strong>سامي الراشد</strong>
+
+              <div class="stars">
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2" opacity=".4"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <p class="section-sub">تفاصيل دقيقة وتلوين ممتاز للريلز — النتيجة فخمة.</p>
+
+        </div>
+
+
+
+        <div class="card testi" data-animate>
+
+          <div class="person">
+
+            <div class="avatar-sm">م</div>
+
+            <div>
+
+              <strong>مها عيسى</strong>
+
+              <div class="stars">
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff8aa2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <p class="section-sub">تسليم في الموعد وبجودة أعلى من المتوقع. تجربة مريحة.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 9) CONTACT -->
+
+  <section id="contact">
+
+  <div class="container">
+
+    <h2 class="section-title" data-animate>تواصل</h2>
+
+    <p class="section-sub" data-animate>
+
+      جاهز نرفع ذائقة المحتوى عندك؟ ابدأ محادثة مباشرة على واتساب.
+
+    </p>
+
+
+
+    <div class="contact-wrap">
+
+      <!-- زر التواصل عبر واتساب -->
+
+      <div class="card" data-animate style="text-align:center; padding:2rem;">
+
+        <a class="btn btn-primary" 
+
+           href="https://wa.me/201080036539" 
+
+           target="_blank" 
+
+           rel="noopener">
+
+          💬 تواصل عبر واتساب
+
+        </a>
+
+        <p class="note" style="margin-top:1rem">برسالة واحدة تبدأ المكالمة معي فورًا</p>
+
+      </div>
+
+
+
+      <!-- كارت معلومات سريعة -->
+
+      <div class="card" data-animate>
+
+        <h3 style="margin-top:0">معلومات سريعة</h3>
+
+        <p class="section-sub">
+
+          متواجد للعمل الحر أو الشهري، والتسليم غالبًا خلال 2-5 أيام حسب الطلب.
+
+        </p>
+
+        <div class="tools">
+
+          <span class="chip">متاح للتعاقد</span>
+
+          <span class="chip">عن بُعد</span>
+
+          <span class="chip">فواتير رسمية</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <button id="toTop" class="to-top" aria-label="إلى الأعلى">
+
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+
+      <path d="M12 5l7 7M12 5L5 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <path d="M12 5v14" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+
+    </svg>
+
+  </button>
+
+
+
+  <footer>
+
+    © <span id="year"></span> الحجاوي — كل الحقوق محفوظة.
+
+  </footer>
+
+
+
+  <script>
+
+    // Header + progress + to top
+
+    const header = document.getElementById('header');
+
+    const progress = document.getElementById('scrollProgress');
+
+    const toTop = document.getElementById('toTop');
+
+    const onScroll = () => {
+
+      const y = window.scrollY;
+
+      header.classList.toggle('scrolled', y > 10);
+
+      const h = document.documentElement;
+
+      const ratio = h.scrollTop / (h.scrollHeight - h.clientHeight);
+
+      progress.style.transform = 'scaleX(' + ratio + ')';
+
+      toTop.classList.toggle('show', y > 800);
+
+    };
+
+    document.addEventListener('scroll', onScroll, {passive:true});
+
+    onScroll();
+
+
+
+    // Mobile nav
+
+    const burger = document.getElementById('burger');
+
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', ()=> navLinks.classList.toggle('open'));
+
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> navLinks.classList.remove('open')));
+
+
+
+    // Reveal on scroll with variants + delays
+
+    const els = document.querySelectorAll('[data-animate]');
+
+    const io = new IntersectionObserver(entries=>{
+
+      entries.forEach(e=>{
+
+        if(e.isIntersecting){
+
+          const d = e.target.getAttribute('data-delay') || 0;
+
+          setTimeout(()=> { e.target.classList.add('show'); }, d);
+
+          io.unobserve(e.target);
+
+        }
+
+      });
+
+    }, {threshold:.15});
+
+    els.forEach(el=> io.observe(el));
+
+
+
+    // 3D tilt disabled - removed mouse follow effects
+
+    // const tilts = document.querySelectorAll('.tilt');
+
+    // Mouse following effects removed as per request
+
+
+
+    // Glow effects disabled - removed mouse following
+
+    // Gallery items glow effect removed as per request
+
+
+
+    // Typing effect
+
+    const typingEl = document.getElementById('typing');
+
+    if (typingEl){
+
+      const words = (typingEl.dataset.words || '').split('|').filter(Boolean);
+
+      let i=0, j=0, deleting=false;
+
+      const type = ()=>{
+
+        const word = words[i] || '';
+
+        typingEl.textContent = deleting ? word.slice(0, j--) : word.slice(0, j++);
+
+        if(!deleting && j === word.length){ deleting = true; setTimeout(type, 1200); return; }
+
+        if(deleting && j === 0){ deleting = false; i = (i+1)%words.length; }
+
+        setTimeout(type, deleting ? 45 : 75);
+
+      };
+
+      type();
+
+    }
+
+
+
+    // Counters
+
+    const nums = document.querySelectorAll('.num[data-count]');
+
+    const ioCount = new IntersectionObserver(entries=>{
+
+      entries.forEach(e=>{
+
+        if(e.isIntersecting){
+
+          const el = e.target;
+
+          const target = +el.dataset.count;
+
+          const dur = 1200;
+
+          const start = performance.now();
+
+          const step = (t)=>{
+
+            const p = Math.min((t - start) / dur, 1);
+
+            el.textContent = Math.floor(p * target);
+
+            if(p < 1) requestAnimationFrame(step);
+
+            else el.textContent = target;
+
+          };
+
+          requestAnimationFrame(step);
+
+          ioCount.unobserve(el);
+
+        }
+
+      });
+
+    }, {threshold:.5});
+
+    nums.forEach(n=> ioCount.observe(n));
+
+
+
+    // Reel lazy embed
+
+    const playBtn = document.getElementById('playReel');
+
+    const reelThumb = document.getElementById('reelThumb');
+
+    const reelEmbed = document.getElementById('reelEmbed');
+
+    if(playBtn){
+
+      playBtn.addEventListener('click', ()=>{
+
+        const YT_ID = 'haW3qysdyd4';
+
+        reelEmbed.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${YT_ID}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+
+        reelEmbed.hidden = false;
+
+        reelThumb.style.display = 'none';
+
+      });
+
+    }
+
+
+
+    // Gallery filter
+
+    const filterBtns = document.querySelectorAll('.f-btn');
+
+    const items = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn=>{
+
+      btn.addEventListener('click', ()=>{
+
+        filterBtns.forEach(b=> b.classList.remove('active'));
+
+        btn.classList.add('active');
+
+        const f = btn.dataset.filter;
+
+        items.forEach(it=>{
+
+          it.style.display = (f === 'all' || it.dataset.type === f) ? '' : 'none';
+
+        });
+
+      });
+
+    });
+
+
+
+    // Before/After slider
+
+    document.querySelectorAll('.ba .ba-wrap').forEach(wrap=>{
+
+      const input = wrap.querySelector('input[type="range"]');
+
+      const update = ()=> wrap.style.setProperty('--cut', input.value + '%');
+
+      input.addEventListener('input', update);
+
+      update();
+
+    });
+
+
+
+    // Contact form (demo)
+
+    const form = document.getElementById('contactForm');
+
+    const note = document.getElementById('formNote');
+
+    form.addEventListener('submit', async (e)=>{
+
+      e.preventDefault();
+
+      const btn = form.querySelector('button[type="submit"]');
+
+      btn.disabled = true; btn.textContent = 'جارٍ الإرسال...';
+
+      note.textContent = '';
+
+      await new Promise(r=>setTimeout(r, 900));
+
+      btn.disabled = false; btn.textContent = 'إرسال';
+
+      form.reset();
+
+      note.textContent = 'تم الإرسال بنجاح! سأعاود التواصل قريبًا.';
+
+    });
+
+
+
+    // To top
+
+    toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+
+
+    // Cursor FX (desktop only)
+
+    if (window.matchMedia('(pointer:fine)').matches){
+
+      const dot = document.createElement('div');
+
+      const ring = document.createElement('div');
+
+      dot.className = 'cursor-dot';
+
+      ring.className = 'cursor-ring';
+
+      document.body.append(dot, ring);
+
+      let x=0,y=0, rx=0, ry=0;
+
+      const move = (e)=>{ x = e.clientX; y = e.clientY; dot.style.transform = `translate(${x-3.5}px, ${y-3.5}px)`; };
+
+      window.addEventListener('mousemove', move, {passive:true});
+
+      const loop = ()=>{ rx += (x - rx) * .18; ry += (y - ry) * .18; ring.style.transform = `translate(${rx-17}px, ${ry-17}px)`; requestAnimationFrame(loop); };
+
+      loop();
+
+      document.addEventListener('mousedown', ()=> ring.style.transform += ' scale(0.85)');
+
+      document.addEventListener('mouseup', ()=> ring.style.transform = `translate(${rx-17}px, ${ry-17}px)`);
+
+      document.addEventListener('mouseleave', ()=> { dot.classList.add('hide-cursor'); ring.classList.add('hide-cursor'); });
+
+      document.addEventListener('mouseenter', ()=> { dot.classList.remove('hide-cursor'); ring.classList.remove('hide-cursor'); });
+
+    }
+
+
+
+    // Year
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+
+
+    // Sound effects
+
+    function createAudio(freq, duration = 200) {
+
+      try {
+
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+        const oscillator = audioContext.createOscillator();
+
+        const gainNode = audioContext.createGain();
+
+        oscillator.connect(gainNode);
+
+        gainNode.connect(audioContext.destination);
+
+        oscillator.frequency.value = freq;
+
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
+
+        oscillator.start(audioContext.currentTime);
+
+        oscillator.stop(audioContext.currentTime + duration / 1000);
+
+      } catch(e) {}
+
+    }
+
+
+
+    // Sound effect on button click
+
+    document.querySelectorAll('.btn, .icon-btn, .f-btn').forEach(btn => {
+
+      btn.addEventListener('click', () => createAudio(400, 100));
+
+    });
+
+
+
+    // Sound effect on nav link click
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+
+      link.addEventListener('click', () => createAudio(500, 150));
+
+    });
+
+
+
+    // Particle effect on clicks
+
+    function createParticle(x, y) {
+
+      const particle = document.createElement('div');
+
+      particle.className = 'particle';
+
+      
